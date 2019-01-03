@@ -29,10 +29,10 @@ app.get("/", function (req, res) {
 app.get("/api/whoami", function (req, res) {
   
   let ip = req.ip; //get ip address
-  let language = accepts(req).languages()
+  let language = accepts(req).languages() //lists languages used
   let uaHeader = req.headers['user-agent'] //lists headers in an array
   console.log(uaHeader);
-  let agent = uaParser.parseOS(uaHeader).toString()
+  // let agent = uaParser.parseOS(uaHeader).toString()
   
   
   res.json({
